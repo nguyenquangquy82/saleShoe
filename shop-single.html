@@ -121,61 +121,52 @@
               <p>
                 Tận hưởng sự thoải mái và phong cách với giày thể thao cao cấp của chúng tôi. Được thiết kế cho cả hiệu suất và trang phục hàng ngày, những đôi giày thể thao này hoàn hảo cho những ai coi trọng tính linh hoạt mà không ảnh hưởng đến tính thẩm mỹ. Cho dù bạn đang tập gym hay chạy việc vặt, đôi giày này đều có thể đáp ứng nhu cầu của bạn.
               </p>
-              <!-- <p class="mb-4">
-                Ex numquam veritatis debitis minima quo error quam eos dolorum
-                quidem perferendis. Quos repellat dignissimos minus, eveniet nam
-                voluptatibus molestias omnis reiciendis perspiciatis illum hic
-                magni iste, velit aperiam quis.
-              </p> -->
               <p><strong class="text-primary h4">1.950.000 VNĐ</strong></p>
               <h1 style="font-size: 24px; font-style: normal; color: #333">
                 Kích thước
               </h1>
-
+          
               <div class="size-selection d-flex flex-wrap">
                 <label for="size-37" class="size-option">
                   <input type="radio" id="size-37" name="shop-sizes" />
                   <span>37</span>
                 </label>
-
+          
                 <label for="size-38" class="size-option">
                   <input type="radio" id="size-38" name="shop-sizes" />
                   <span>38</span>
                 </label>
-
+          
                 <label for="size-39" class="size-option">
                   <input type="radio" id="size-39" name="shop-sizes" />
                   <span>39</span>
                 </label>
-
+          
                 <label for="size-40" class="size-option">
                   <input type="radio" id="size-40" name="shop-sizes" />
                   <span>40</span>
                 </label>
-
+          
                 <label for="size-41" class="size-option">
                   <input type="radio" id="size-41" name="shop-sizes" />
                   <span>41</span>
                 </label>
-
+          
                 <label for="size-42" class="size-option">
                   <input type="radio" id="size-42" name="shop-sizes" />
                   <span>42</span>
                 </label>
-
+          
                 <label for="size-43" class="size-option">
                   <input type="radio" id="size-43" name="shop-sizes" />
                   <span>43</span>
                 </label>
               </div>
-
+          
               <div class="mb-5">
                 <div class="input-group mb-3" style="max-width: 120px">
                   <div class="input-group-prepend">
-                    <button
-                      class="btn btn-outline-primary js-btn-minus"
-                      type="button"
-                    >
+                    <button class="btn btn-outline-primary js-btn-minus" type="button">
                       &minus;
                     </button>
                   </div>
@@ -188,22 +179,26 @@
                     aria-describedby="button-addon1"
                   />
                   <div class="input-group-append">
-                    <button
-                      class="btn btn-outline-primary js-btn-plus"
-                      type="button"
-                    >
+                    <button class="btn btn-outline-primary js-btn-plus" type="button">
                       &plus;
                     </button>
                   </div>
                 </div>
               </div>
               <p>
-                <a href="cart.html" class="buy-now btn btn-sm btn-primary"
-                  >Thêm vào giỏ hàng</a
-                >
+                <a href="checkout.html" class="buy-now btn btn-sm btn-primary" onclick="checkSizeSelection(event)">
+                  Mua ngay
+                </a>
+                <a href="cart.html" class="buy-now btn btn-sm btn-primary" onclick="checkSizeSelection(event)">
+                  Thêm vào giỏ hàng
+                </a>
               </p>
             </div>
           </div>
+          
+          <script src="js/sizeSelection.js"></script>
+          
+                    
         </div>
       </div>
 
