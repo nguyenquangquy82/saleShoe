@@ -53,3 +53,14 @@ function validatePassword() {
   }
   return true; // Return true if passwords match
 }
+
+function validateEmail() {
+  const emailInput = document.getElementById("username").value;
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!emailPattern.test(emailInput)) {
+    alert("Vui lòng nhập một địa chỉ email hợp lệ.");
+    return false; // Ngăn chặn form submit nếu email không hợp lệ
+  }
+  return true; // Cho phép submit nếu email hợp lệ
+}
