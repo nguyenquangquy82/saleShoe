@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/jquery-ui.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -55,7 +55,14 @@
                 <div class="site-top-icons">
                   <ul>
                     <li>
-                      <a href="#"><span class="icon icon-person"></span></a>
+                      <div class="dropdown-container">
+                        <a href="#" id="logout-icon">
+                            <span class="icon icon-person"></span>
+                        </a>
+                        <div class="dropdown-menu" id="dropdown-menu">
+                            <a href="#">Đăng xuất</a>
+                        </div>
+                    </div>
                     </li>
                     <li>
                       <a href="#"><span class="icon icon-heart-o"></span></a>
@@ -703,7 +710,7 @@
           <!--  -->
       </footer>
     </div>
-
+    <script src="js/sizeSelection.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.min.js"></script>

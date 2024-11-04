@@ -55,7 +55,14 @@
                 <div class="site-top-icons">
                   <ul>
                     <li>
-                      <a href="#"><span class="icon icon-person"></span></a>
+                      <div class="dropdown-container">
+                        <a href="#" id="logout-icon">
+                            <span class="icon icon-person"></span>
+                        </a>
+                        <div class="dropdown-menu" id="dropdown-menu">
+                            <a href="#">Đăng xuất</a>
+                        </div>
+                    </div>
                     </li>
                     <li>
                       <a href="#"><span class="icon icon-heart-o"></span></a>
@@ -108,7 +115,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="site-section">
         <div class="container">
           <div class="row mb-5">
@@ -128,89 +135,47 @@
                   <tbody>
                     <tr>
                       <td class="product-thumbnail">
-                        <img
-                          src="images/3.webp"
-                          alt="Image"
-                          class="img-fluid"
-                        />
+                        <img src="images/3.webp" alt="Sneakers" class="img-fluid" />
                       </td>
                       <td class="product-name">
                         <h2 class="h5 text-black">Sneakers</h2>
                       </td>
-                      <td>1.500.000 VNĐ</td>
+                      <td data-price="1500000" class="product-price">1.500.000 VNĐ</td>
                       <td>
                         <div class="input-group mb-3" style="max-width: 120px">
                           <div class="input-group-prepend">
-                            <button
-                              class="btn btn-outline-primary js-btn-minus"
-                              type="button"
-                            >
-                              &minus;
-                            </button>
+                            <button class="btn btn-outline-primary js-btn-minus" type="button" onclick="updateQuantity(this, -1)">&minus;</button>
                           </div>
-                          <input
-                            type="text"
-                            class="form-control text-center"
-                            value="1"
-                            placeholder=""
-                            aria-label="Example text with button addon"
-                            aria-describedby="button-addon1"
-                          />
+                          <input type="number" class="form-control text-center quantity-input" value="1" min="1" />
                           <div class="input-group-append">
-                            <button
-                              class="btn btn-outline-primary js-btn-plus"
-                              type="button"
-                            >
-                              &plus;
-                            </button>
+                            <button class="btn btn-outline-primary js-btn-plus" type="button" onclick="updateQuantity(this, 1)">&plus;</button>
                           </div>
                         </div>
                       </td>
-                      <td>1.500.000 VNĐ</td>
+                      <td class="product-total" data-price="1500000">1.500.000 VNĐ</td>
                       <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
                     </tr>
-
+      
                     <tr>
                       <td class="product-thumbnail">
-                        <img
-                          src="images/2.webp"
-                          alt="Image"
-                          class="img-fluid"
-                        />
+                        <img src="images/2.webp" alt="Running Shoes" class="img-fluid" />
                       </td>
                       <td class="product-name">
                         <h2 class="h5 text-black">Running Shoes</h2>
                       </td>
-                      <td>2.500.000 VNĐ</td>
+                      <td data-price="2500000" class="product-price">2.500.000 VNĐ</td>
                       <td>
                         <div class="input-group mb-3" style="max-width: 120px">
                           <div class="input-group-prepend">
-                            <button
-                              class="btn btn-outline-primary js-btn-minus"
-                              type="button"
-                            >
-                              &minus;
-                            </button>
+                            <button class="btn btn-outline-primary js-btn-minus" type="button" onclick="updateQuantity(this, -1)">&minus;</button>
                           </div>
-                          <input
-                            type="text"
-                            class="form-control text-center"
-                            value="1"
-                            placeholder=""
-                            aria-label="Example text with button addon"
-                            aria-describedby="button-addon1"
-                          />
+                          <input type="number" class="form-control text-center quantity-input" value="1" min="1" />
                           <div class="input-group-append">
-                            <button
-                              class="btn btn-outline-primary js-btn-plus"
-                              type="button"
-                            >
-                              &plus;
-                            </button>
+                            <button class="btn btn-outline-primary js-btn-plus" type="button" onclick="updateQuantity(this, 1)">&plus;</button>
                           </div>
                         </div>
                       </td>
-                      <td>2.500.000 VNĐ</td>
+                      <td class="product-total" data-price="2500000">2.500.000 VNĐ</td>
                       <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
                     </tr>
                   </tbody>
@@ -218,12 +183,12 @@
               </div>
             </form>
           </div>
-
+      
           <div class="row">
             <div class="col-md-6">
               <div class="row mb-5">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <button class="btn btn-primary btn-sm btn-block">
+                  <button class="btn btn-primary btn-sm btn-block" type="submit">
                     Cập nhật giỏ hàng
                   </button>
                 </div>
@@ -251,6 +216,7 @@
                 </div>
               </div>
             </div>
+      
             <div class="col-md-6 pl-5">
               <div class="row justify-content-end">
                 <div class="col-md-7">
@@ -261,21 +227,30 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-md-6">
-                      <span class="text-black">Tổng phụ</span>
+                        <span class="text-black">Tổng tiền</span>
                     </div>
                     <div class="col-md-6 text-right">
-                      <strong class="text-black">3.000.000 VNĐ</strong>
+                        <strong class="text-black" data-subtotal>3.000.000 VNĐ</strong>
                     </div>
-                  </div>
-                  <div class="row mb-5">
+                </div>
+                <div class="row mb-3">
                     <div class="col-md-6">
-                      <span class="text-black">Tổng cộng</span>
+                        <span class="text-black">Phí vận chuyển</span>
                     </div>
                     <div class="col-md-6 text-right">
-                      <strong class="text-black">3.000.000 VNĐ</strong>
+                        <strong class="text-black" data-shipping>100.000 VNĐ</strong>
                     </div>
-                  </div>
-
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-6">
+                        <span class="text-black">Tổng cộng</span>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <strong class="text-black" data-total>3.100.000 VNĐ</strong>
+                    </div>
+                </div>
+                
+      
                   <div class="row">
                     <div class="col-md-12">
                       <button
@@ -378,7 +353,7 @@
           <!--  -->
       </footer>
     </div>
-
+    <script src="js/sizeSelection.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.min.js"></script>
